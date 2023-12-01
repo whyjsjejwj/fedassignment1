@@ -77,7 +77,7 @@ nav.select a:hover { /*hover effect*/
     align-items: center;
     padding-left: 2%;
     margin-top: auto;
-    width: 150px;
+    width: 200px;
 }
 
 /* VIDEO */
@@ -124,7 +124,12 @@ nav.select a:hover { /*hover effect*/
     margin-left: 40px; /* spacing between the icons */
 }
 
-/* RECOMMENDATIONS */
+.usersignup {
+    text-decoration: none;
+    color: black;
+}
+
+/* RECOMMENDATIONS FOR INDEX PAGE*/
 .images {
     border-radius: 50px;
     align-content: center;
@@ -133,6 +138,17 @@ nav.select a:hover { /*hover effect*/
     margin-inline: 25px; /*spaces in between the images*/
     margin-bottom: 20px; /*spaces below the image*/
 }
+
+/*RECOMMENDATIONS FOR ACCESSORIES PAGE */
+.images2 {
+    border-radius: 50px;
+    align-content: center;
+    height: 100px;
+    width: auto;
+    margin-inline: 25px; /*spaces in between the images*/
+    margin-bottom: 20px; /*spaces below the image*/
+}
+
 
 /* PRODUCT IMAGES */
 .container-product {
@@ -148,6 +164,17 @@ nav.select a:hover { /*hover effect*/
     border: 1px solid #ccc; /* slight bit of border color */
     border-radius: 8px; /* round corners for border */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    max-width: 350px; 
+    max-height: 500px;  
+    height: 100%;
+    width: 100%;
+}
+
+.product-card2 { /* for description */
+    background-color: #f0f0f0; /* light grey background colour */
+    border: 1px solid #ccc; /* slight bit of border color */
     padding: 30px;
     text-align: center;
     max-width: 350px; 
@@ -201,7 +228,7 @@ nav.select a:hover { /*hover effect*/
 }
 
 /* FOOTER */
-* {
+.removeOriginal {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -264,3 +291,122 @@ footer{
     margin: 0px 5px;
 }
 
+/* SIGNUP */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  .signup-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+
+  .signup-header {
+    text-align: center;
+    color: #333333;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+  }
+
+  .form-group button {
+    background-color: #12279E;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+
+/* SLIDESHOW */
+.slideshow-container { /* container for slideshow */
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.mySlides img {/* scales the image */
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next { /* nav btns */
+    color: white;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    font-weight: bold;
+    font-size: 40px;    
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 50%;
+}
+
+.Slideshowtext { /* some captions */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #404040;
+    font-size: 25px;
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot { /* dots below the captions */
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active, .dot:hover {
+    background-color: #717171
+}
+
+.slideshow-text {
+    align-items: center;
+    margin-left: 36.5%;
+    font-size: larger;
+    font-weight: bold;
+}
+
+/* 

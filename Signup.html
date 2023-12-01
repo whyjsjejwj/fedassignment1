@@ -9,10 +9,10 @@
 
     <script>
         function validatePassword() {
-            var password = document.getElementById("password").value;
-            var confirmPassword = document.getElementById("confirmPassword").value;
+            var password = document.getElementById("password").value; /* retrieves the element in the id "password" */
+            var confirmPassword = document.getElementById("confirmPassword").value; /* retrieves the element in the id "confirmPassword" */
 
-            if (password !== confirmPassword) {
+            if (password !== confirmPassword) { /*checks if the password matches
                 alert("Passwords do not match!");
                 return false;
             }
@@ -23,7 +23,7 @@
         function passwordRequirements() {
             var password = document.getElementById("password").value;
 
-            if (password.length < 8 || !/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password)) {
+            if (password.length < 8 || !/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password)) { /* checks if the password meets the length OR if it met the regex pattern */
                 document.getElementById("error-message").innerHTML =
                     "Password must meet the following requirements:<br>" +
                     "At least one digit<br>" +
@@ -72,6 +72,7 @@
             </div>
 
             <div id="error-message" class="error-message"></div>
+            <div class="smallspace"></div>
 
             <div class="form-group fonts">
                 <button type="submit">Sign Up</button>

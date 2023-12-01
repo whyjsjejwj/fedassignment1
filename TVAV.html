@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<hmtl lang = 'en'>
+<html lang='en'>
     <head>
             
         <title>Samsung | Great Television Deals!</title>
@@ -17,7 +17,7 @@
                 <div class="icon-container">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-user"></i>
+                    <a href="Signup.html" class="usersignup" ><i class="fa-solid fa-user"></i></a>
                 </div>
             </div>
             
@@ -34,8 +34,125 @@
 
             <hr>
 
+            </div>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides">
+                    <img src="tv1.avif" alt="tv1">
+                    <div class="Slideshowtext">OUR LATEST</div>
+                </div>
+            
+                <div class="mySlides">
+                    <img src="tv2.avif" alt="tv2">
+                    <div class="Slideshowtext">BETTER GRAPHICS</div>
+                </div>
+            
+                <div class="mySlides">
+                    <img src="tv3.avif" alt="tv3">
+                    <div class="Slideshowtext">HIGHER RESOLUTION</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <div class="space"></div>
+
+            <div class="fonts slideshow-text product-card2">
+                <p>
+                    RECOMMENDED TELEVISIONS THAT ARE VALUE FOR ITS PRICE
+                </p>
+            </div>
+
+            <div class="space"></div>
+
+            <div class="container-product">
+                <div class="product-card">
+                    <img class="product-image" src="tv5.avif" alt="S95C">
+                    <p class="product-desc">77" S95C 4K Smart TV</p>
+                    <ul class="product-desc2">
+                        <li>Samsung OLED Technology</li>
+                        <li>Neutral Quantum Processor 4K</li>
+                        <li>Slim One Connect</li>
+                    </ul>
+                    <p class="price">$10,499.00</p>
+                </div>
+
+                <div class="product-card">
+                    <img class="product-image" src="tv6.avif" alt="Q60C">
+                    <p class="product-desc">75" Q60C 4K Smart TV</p>
+                    <ul class="product-desc2">
+                        <li>100% Colour Volume</li>
+                        <li>Quantum HDR</li>
+                        <li>AirSlim</li>
+                    </ul>
+                    <p class="price">$2,799.00</p>
+                </div>
+
+                <div class="product-card">
+                    <img class="product-image" src="tv7.avif" alt="CU80">
+                    <p class="product-desc">75" CU80 4K Smart TV</p>
+                    <ul class="product-desc2">
+                        <li>Dynamic Crystal Colour</li>
+                        <li>AirSlim</li>
+                        <li>Crystal Processor 4K</li>
+                    </ul>
+                    <p class="price">$1599.00</p>
+                </div>
+
+                <div class="product-card">
+                    <img class="product-image" src="tv8.avif" alt="CU70">
+                    <p class="product-desc">75" CU70 4K Smart TV</p>
+                    <ul class="product-desc2">
+                        <li>PurColour</li>
+                        <li>Smart Hub</li>
+                        <li>Crystal Processor 4K</li>
+                    </ul>
+                    <p class="price">$1399.00</p>
+                </div>
+            </div>
+
+            <script>
+                let slideIndex = 1; /* initialise the slide index to 1 */
+                showSlides(slideIndex);
+        
+                function plusSlides(n) { /* display the initial set of slides */
+                    showSlides(slideIndex += n);
+                }
+        
+                function currentSlide(n) { /* allows users to navigate to previous or next slide */
+                    showSlides(slideIndex = n);
+                }
+        
+                function showSlides(n) { /* controls the display of slides */
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides"); /* get the elements in class "mySlides" */
+                    let dots = document.getElementsByClassName("dot"); /* get the elements in class "dot" */
+                    if (n > slides.length) { slideIndex = 1; } /* if index is greater than no. of slides, set index to 1 */
+                    if (n < 1) { slideIndex = slides.length; } /* if index is lesser than 1, set it to last slide */
+                    for (i = 0; i < slides.length; i++) { /* hides all the slides */
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) { /* removes the colour of the dot when mouse is hovered above */
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block"; /* displays the current slide */
+                    dots[slideIndex - 1].className += " active"; /* adds "active" class to the dot corresponding to the current slide */
+                }
+            
+            </script>
+        <div class="space"></div>
+    </body>
+
             <footer>
-                <div class="footer-container">
+                <div class="footer-container removeOriginal">
                     <div class="footericons">
                         <a href="https://www.facebook.com/SamsungSingapore/"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://www.instagram.com/samsungsg/?hl=en"><i class="fa-brands fa-instagram "></i></a>
@@ -44,7 +161,7 @@
                     </div>
                 </div>
                 <div class="footerbottom fonts">
-                    <p>Copyright&copy; 2023; Designed by <span class="designer">Zhizhong</p>
+                    <p>Copyright&copy; 2023; Designed by <span class="designer">Zhizhong</span></p>
                 </div>
             </footer>
         
