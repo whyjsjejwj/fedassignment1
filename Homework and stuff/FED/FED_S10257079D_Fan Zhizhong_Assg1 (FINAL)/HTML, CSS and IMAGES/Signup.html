@@ -12,7 +12,7 @@
             var password = document.getElementById("password").value; /* retrieves the element in the id "password" */
             var confirmPassword = document.getElementById("confirmPassword").value; /* retrieves the element in the id "confirmPassword" */
 
-            if (password !== confirmPassword) { /*checks if the password matches
+            if (password !== confirmPassword) { /*checks if the password matches */
                 alert("Passwords do not match!");
                 return false;
             }
@@ -39,7 +39,7 @@
 </head>
 
 <body>
-    <div class="logo-icon-container">
+    <div class="logo-icon-container"> <!--samsung logo-->
         <img class="logo" src="logo.jpg">
     </div>
 
@@ -48,34 +48,34 @@
             Create an Account
         </h2>
 
-        <form action="Index.html" method="GET" onsubmit="return validatePassword() && passwordRequirements()">
+        <form action="Index.html" method="GET" onsubmit="return validatePassword() && passwordRequirements()"> <!--once signed up, brings you to home (index) page-->
             <div class="form-group fonts">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required> <!--email input-->
             </div>
 
             <div class="check fonts">
                 <input type="checkbox" id="remember" name="remember">
-                <label for="Remember">Remember my account</label>
+                <label for="Remember">Remember my account</label> <!--if user wants their details to be remembered-->
             </div>
 
             <div class="smallspace"></div>
 
             <div class="form-group fonts">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" required> <!--password input-->
             </div>
 
             <div class="form-group fonts">
                 <label for="confirmPassword">Confirm password</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" required> <!--password confirmation input-->
             </div>
 
-            <div id="error-message" class="error-message"></div>
+            <div id="error-message" class="error-message"></div> <!--error message for when the password does not meet the requirements-->
             <div class="smallspace"></div>
 
             <div class="form-group fonts">
-                <button type="submit">Sign Up</button>
+                <button type="submit">Sign Up</button> <!--sing-up button-->
             </div>
         </form>
     </div>

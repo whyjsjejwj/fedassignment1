@@ -1,5 +1,5 @@
 /* CREATES SPACE */
-.space { /*creates a space*/
+.space { /*creates space*/
     margin: 60px;
 } 
 
@@ -20,6 +20,14 @@
     font-size: 40px;
     padding-left: 30px;
     padding-top: 30px;
+}
+
+#hotpick2 {
+    color: black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    padding-top: 20px;
 }
 
 /* SEARCH BAR */
@@ -59,7 +67,7 @@ nav.select {
 
 nav.select a { 
     font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
+    text-decoration: none; /* removes the underline below navigation */
     color: black;
     font-size: 15px;
     font-weight: 700;
@@ -158,6 +166,22 @@ nav.select a:hover { /*hover effect*/
     align-items: center;
 }
 
+.container-product2 {
+    display: flex;
+    gap: 20px;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circular-container-product {
+    display: flex;
+    gap: 5px;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /* PRODUCT CARD */
 .product-card { /* for description */
     background-color: #f0f0f0; /* light grey background colour */
@@ -172,9 +196,11 @@ nav.select a:hover { /*hover effect*/
     width: 100%;
 }
 
-.product-card2 { /* for description */
+.product-card-other { /*for the description beside the video */
     background-color: #f0f0f0; /* light grey background colour */
     border: 1px solid #ccc; /* slight bit of border color */
+    border-radius: 8px; /* round corners for border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
     max-width: 350px; 
@@ -183,12 +209,69 @@ nav.select a:hover { /*hover effect*/
     width: 100%;
 }
 
+.product-card-long { /*for the description in TVAV page */
+    background-color: #f0f0f0; /* light grey background colour */
+    border: 1px solid #ccc; /* slight bit of border color */
+    border-radius: 8px; /* round corners for border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    max-width: 350px; 
+    max-height: 500px;  
+    height: 100%;
+    width: 100%;
+}
+
+.product-card2 { 
+    background-color: #f0f0f0;
+    border: 1px solid #ccc; 
+    padding: 40px;
+    text-align: center;
+    max-width: 350px; 
+    max-height: 500px;  
+    height: 100%;
+    width: 100%;
+}
+
+.product-card3 { /* for accessories */ 
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 200px; /* fixed width for product card */
+    height: 250px; /* fixed height for product card */
+}
+
+.circular-product-card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 50%; /* circular shape */
+    overflow: hidden; /* the content inside is clipped to the rounded shape */
+    width: 150px; 
+    height: 150px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .product-image {
-    width: 100%; 
+    width: 400px; 
     height: auto;
     max-width: 100%; 
     border-radius: 8px;
   }
+
+.circular-product-image {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: cover; /* have the image to cover the entire container */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* circular shape */
+}
 
 .product-image-container {
     display: flex;
@@ -213,10 +296,29 @@ nav.select a:hover { /*hover effect*/
     margin-top: 10px;
 }
 
+.product-desc-acc {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+    color: green;
+}
+
 .price {
     color: #4e4e4e;
     font-weight: bold;
     font-size: 20px;
+}
+
+.product-name {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
 }
 
 .other-container{
@@ -271,6 +373,28 @@ footer{
 .footericons a:hover i { /*hover effect */
     color: white;
     transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li p {
+    color: black;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+}
+
+.footerNav ul li p:hover {
+    opacity: 1;
 }
 
 .footerbottom {
@@ -409,4 +533,119 @@ body {
     font-weight: bold;
 }
 
-/* 
+@media screen and (max-width: 700px) { /* responsive for mobile phone */
+
+
+    .other-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .product-card-other {
+
+        align-items: center;
+        justify-items: center;
+        align-content: center;  
+    }
+
+    #hotpick2 {
+        font-size: 25px;
+    }
+
+    .product-card3{
+        height: 300px;
+    }
+
+    .container-product2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .circular-container-product{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .product-card2 {
+        margin-left: 25px;
+    }
+
+    .product-card-long  {
+        margin-top: 0px;
+        height: 420px;
+        width: 200px;
+    }
+    
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .footerNav ul{
+        flex-direction: column;
+    }
+
+    .container-product{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .product-card {
+        height: 350px;
+        width: 200px;
+    }
+
+    #hotpick {
+        font-size: 25px;
+    }
+    
+
+    body {
+        font-size: 20px;
+    }
+
+    .other-container .images{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100px;
+        height: 100px;
+        margin: 1px;
+    }
+
+
+    ul{
+        font: 20px;
+    }
+
+    iframe{
+        width: 500px;
+        height: 250px;
+    }
+
+    h4{
+        font-size: 15px;
+    }
+
+    .fonts {
+        font-size: 20px;
+    }
+
+    .container-iframe {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+        gap: 15px;
+    }
+
+    .product-card {
+        max-width: 100%; /* make product cards fill the entire width on smaller screens */
+    }
+}
